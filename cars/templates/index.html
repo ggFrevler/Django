@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Volkswagen</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+ <!-- Verx -->
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Volkswagen</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href=" ">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/catalog/">Catalog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/about/">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/">Authorization</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col">
+                <nav class="navbar bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+<!-- kartinki -->
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-0">
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/1.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/2.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/3.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-0">
+
+            </div>
+        </div>
+    </div>
+
+ <!--3 bloka-->
+    <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Volkswagen's Main services</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <img src="{% static 'images/6.png'  %}" width="50px">
+                </div>
+                <h3 class="fs-2">Service</h3>
+                <p>Choosing a reliable Volkswagen car, you get quality guarantees from the brand and the most comfortable conditions during the period of car ownership. </p>
+                <a href="#" class="icon-link d-inline-flex align-items-center">
+                    Call to action
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+            </div>
+            <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <img src="{% static 'images/5.png' %}" width="50px">
+                </div>
+                <h3 class="fs-2">Cars in stock</h3>
+                <p>Becoming the owner of a new Volkswagen car is easier than you thought - just select the desired configuration or find the dealer closest to you.</p>
+                <a href="#" class="icon-link d-inline-flex align-items-center">
+                    Call to action
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+            </div>
+            <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <img src="{% static 'images/4.png' %}" width="50px">
+                </div>
+                <h3 class="fs-2">Find a dealer</h3>
+                <p>Find the Volkswagen dealership closest to you.</p>
+                <a href="#" class="icon-link d-inline-flex align-items-center">
+                    Call to action
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+ <!--konec-->
+<div class="container text-left">
+<div class="row">
+<div class="col-3">
+                <div class="StyledTextComponent-sc-hqqa9q jJmmQf">Address: Maldybaeva 34B</div>
+                <div class="StyledTextComponent-sc-hqqa9q jJmmQf">Numbers: +447458197431</div>
+                <div class="StyledTextComponent-sc-hqqa9q jJmmQf">E-mail: mephi1984@gmail.com</div>
+            </div>
+<div class="col-9">
+            </div>
+ <div class="StyledTextComponent-sc-hqqa9q bCynGP" style="margin-bottom: 40px;">© Volkswagen 2022</div>
+    </div>
+</div>
+<script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
