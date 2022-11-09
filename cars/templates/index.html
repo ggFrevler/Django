@@ -9,46 +9,7 @@
 </head>
 <body>
  <!-- Verx -->
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <nav class="navbar navbar-expand-lg bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Volkswagen</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href=" ">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/catalog/">Catalog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/about/">About us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/admin/">Authorization</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="col">
-                <nav class="navbar bg-light">
-                    <div class="container-fluid">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
+    {% include "header.html" with homeActive="active" %}
 
 <!-- kartinki -->
     <div class="container text-center">
@@ -94,8 +55,8 @@
                 </div>
                 <h3 class="fs-2">Service</h3>
                 <p>Choosing a reliable Volkswagen car, you get quality guarantees from the brand and the most comfortable conditions during the period of car ownership. </p>
-                <a href="#" class="icon-link d-inline-flex align-items-center">
-                    Call to action
+                <a href="mailto:mephi1984@gmail.com" class="icon-link d-inline-flex align-items-center">
+                    Get the quote
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
                 </a>
             </div>
@@ -105,8 +66,8 @@
                 </div>
                 <h3 class="fs-2">Cars in stock</h3>
                 <p>Becoming the owner of a new Volkswagen car is easier than you thought - just select the desired configuration or find the dealer closest to you.</p>
-                <a href="#" class="icon-link d-inline-flex align-items-center">
-                    Call to action
+                <a href="catalog/" class="icon-link d-inline-flex align-items-center">
+                    Select a car
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
                 </a>
             </div>
@@ -116,8 +77,8 @@
                 </div>
                 <h3 class="fs-2">Find a dealer</h3>
                 <p>Find the Volkswagen dealership closest to you.</p>
-                <a href="#" class="icon-link d-inline-flex align-items-center">
-                    Call to action
+                <a href="about/" class="icon-link d-inline-flex align-items-center">
+                    Find a dealer
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
                 </a>
             </div>
@@ -125,18 +86,8 @@
     </div>
 
  <!--konec-->
-<div class="container text-left">
-<div class="row">
-<div class="col-3">
-                <div class="StyledTextComponent-sc-hqqa9q jJmmQf">Address: Maldybaeva 34B</div>
-                <div class="StyledTextComponent-sc-hqqa9q jJmmQf">Numbers: +447458197431</div>
-                <div class="StyledTextComponent-sc-hqqa9q jJmmQf">E-mail: mephi1984@gmail.com</div>
-            </div>
-<div class="col-9">
-            </div>
- <div class="StyledTextComponent-sc-hqqa9q bCynGP" style="margin-bottom: 40px;">© Volkswagen 2022</div>
-    </div>
-</div>
+{% include "footer.html" %}
+
 <script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
