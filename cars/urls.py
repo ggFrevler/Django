@@ -7,4 +7,5 @@ urlpatterns = [
     path('catalog/', views.Catalog, name='catalog'),
     path('about/', views.About, name='about'),
     path('car/<int:item>', views.Car, name='car'),
+    path('search/', views.Search, name='search'),
 ]

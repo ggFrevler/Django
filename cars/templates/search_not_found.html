@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Catalog</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+<!-- verx-->
+{% include "header.html" %}
+
+<ul>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <main>
+
+        <section class="py-5 text-center container">
+            <div class="row py-lg-0">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">No results found!</h1>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</ul>
+
+
+
+
+
+ <!--konec-->
+{% include "footer.html" %}
+
+<script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

@@ -20,6 +20,14 @@ def Car(request, item):
     carType = models.Catal.CarType.choices[car.carType][1]
     return render(request, 'car.html', {'car': car, 'carType': carType})
 
+def Search(request):
+    query = request.GET.get("query")
+    catalog = models.Catal.objects.filter(name__contains=query)
+    if (catalog.count() > 0):
+        return render(request, 'search.html', {'catalog': catalog})
+    else:
+        return render(request, 'search_not_found.html')
+
 
 def About(request):
      return render(request, 'about.html')
