@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-!p%(%id^u7u0r^o16u&gzv9h5ph0dxzt2+pn^rtv4jmig=81xr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["volkswagen.fishrungames.com"]
+CSRF_TRUSTED_ORIGINS = ["https://volkswagen.fishrungames.com"]
 
 # Application definition
 
