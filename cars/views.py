@@ -32,3 +32,10 @@ def Search(request):
 def About(request):
      return render(request, 'about.html')
 
+
+def Register(request):
+    return render(request, 'register.html')
+
+
+def Login(request):
+    return render(request, 'login.html')
