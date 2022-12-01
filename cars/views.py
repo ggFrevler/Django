@@ -1,5 +1,9 @@
 from django.shortcuts import render
-
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.views import LoginView
+from django.urls import reverse
+from django.views.generic import CreateView, ListView
 from . import models
 # Create your views here.
 
@@ -39,3 +43,21 @@ def Register(request):
 
 def Login(request):
     return render(request, 'login.html')
+
+
+
+class Registration(CreateView):
+    form_class = UserCreationForm
+    success_url = '/users/'
+    template_name = 'register.html'
+
+
+class NewLoginForm(LoginView):
+    form_class = AuthenticationForm
+    template_name = 'login.html'
+
+    def get_success_url(self):
+        return ""
+
+
+

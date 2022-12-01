@@ -10,4 +10,6 @@ urlpatterns = [
     path('search/', views.Search, name='search'),
     path('registration/', views.Register, name='registration'),
     path('login/', views.Login, name='login'),
+    path('registration/', views.Registration.as_view(), name='registration'),
+    path('login/', views.NewLoginForm.as_view(), name='login'),
 ]
