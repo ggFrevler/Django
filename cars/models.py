@@ -23,7 +23,12 @@ class Catal(models.Model):
     carType = models.IntegerField(default=CarType.UNKNOWN, choices=CarType.choices)
     price = models.IntegerField()
 
-
+class CommentCar(models.Model):
+    comment = models.ForeignKey(Catal, on_delete=models.CASCADE, related_name='comment_object')
+    text = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.comment.name
 
 
 
@@ -58,9 +63,9 @@ class CustomUser(User):
 
 
 
-class Comment(models.Model):
-    comment = models.ForeignKey(Catal, on_delete=models.CASCADE, related_name='comment_object')
-    text = models.TextField()
-    created_date = models.DateTimeField(auto_now_add=True)
-    def __str__(self):
-        return self.comment.name
+
+
+
+
+
+

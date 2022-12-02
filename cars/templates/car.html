@@ -46,7 +46,22 @@
         </div>
     </main>
 
-{% include "comment.html" %}
+
+
+ <p>
+        <b>Comments for car:</b>
+<ol>
+    {%for i in object.comment_object.all %}
+    <li>
+            <p>{{i.text}}</p>
+
+
+        </li>
+    <p>{{t.created_date}}</p>
+    {%endfor%}
+
+</ol>
+    </p>
 
  <!--konec-->
 {% include "footer.html" %}

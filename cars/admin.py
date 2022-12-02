@@ -4,4 +4,4 @@ from django.contrib import admin
 from . import models
 admin.site.register(models.Karysel)
 admin.site.register(models.Catal)
-admin.site.register(models.Comment)
+admin.site.register(models.CommentCar)

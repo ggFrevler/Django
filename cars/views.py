@@ -36,16 +36,6 @@ def Search(request):
 def About(request):
      return render(request, 'about.html')
 
-
-def Register(request):
-    return render(request, 'register.html')
-
-
-def Login(request):
-    return render(request, 'login.html')
-
-
-
 class Registration(CreateView):
     form_class = UserCreationForm
     success_url = '/users/'
@@ -57,7 +47,7 @@ class NewLoginForm(LoginView):
     template_name = 'login.html'
 
     def get_success_url(self):
-        return ""
+        return "/"
 
 
 
