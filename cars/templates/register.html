@@ -31,8 +31,54 @@
 <div class="row justify-content-center" style="margin-top:80px;margin-bottom:80px">
 <form method="post">
   {% csrf_token %}
-  {{form.as_p}}
-  <button type="submit">Register</button>
+
+
+ <div class="row justify-content-center" style="margin-top:100px;margin-bottom:80px">
+<center>
+<nav class="navbar navbar-expand-lg bg-light gap-2 col-3 mx-auto">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/login/">Authorization</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+        <li class="nav-item">
+          <a class="navbar-brand" href="/registration/">Registration</a>
+        </li>
+          </ul>
+    </div>
+  </div>
+</nav>
+    </center>
+
+  <div class="form-floating gap-3 col-3 mx-auto">
+    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username" type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" id="id_username">
+    <label for="floatingInputGroup1">Username</label>
+  </div>
+     <div><label></label></div>
+<div class="form-floating mb-3 gap-2 col-3 mx-auto">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+  <label for="floatingInput">Email address</label>
+</div>
+     <div><label></label></div>
+<div class="form-floating gap-3 col-3 mx-auto">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
+  <label for="floatingPassword">Password</label>
+</div>
+     <div><label></label></div>
+<div class="form-floating gap-3 col-3 mx-auto">
+  <input type="password" class="form-control" id="floatingPassword1" placeholder="Password" type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+  <label for="floatingPassword">Password again</label>
+</div>
+
+<div><label></label></div>
+
+
+<div class="d-grid gap-3 col-3 mx-auto">
+  <button type="submit" class="btn btn-primary">Register</button>
+</div>
+     </div>
 </form>
 </div>
           </main>

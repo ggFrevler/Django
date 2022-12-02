@@ -6,6 +6,7 @@
     {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style2.css' %}">
 </head>
 <body>
  <!-- verx-->
@@ -46,22 +47,13 @@
         </div>
     </main>
 
+ {% include "comments.html" %}
 
 
- <p>
-        <b>Comments for car:</b>
-<ol>
-    {%for i in object.comment_object.all %}
-    <li>
-            <p>{{i.text}}</p>
+          <div><label></label></div>
+          <div><label></label></div>
+          <div><label></label></div>
 
-
-        </li>
-    <p>{{t.created_date}}</p>
-    {%endfor%}
-
-</ol>
-    </p>
 
  <!--konec-->
 {% include "footer.html" %}

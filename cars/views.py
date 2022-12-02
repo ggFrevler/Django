@@ -22,7 +22,11 @@ def Catalog(request):
 def Car(request, item):
     car = models.Catal.objects.get(id=item)
     carType = models.Catal.CarType.choices[car.carType][1]
-    return render(request, 'car.html', {'car': car, 'carType': carType})
+    comments = models.CommentCar.objects.filter(comment=car.id)
+    return render(request, 'car.html', {'car': car, 'carType': carType, 'comments' : comments})
+
+
+
 
 def Search(request):
     query = request.GET.get("query")
@@ -40,6 +44,8 @@ class Registration(CreateView):
     form_class = UserCreationForm
     success_url = '/users/'
     template_name = 'register.html'
+    def get_success_url(self):
+        return "/"
 
 
 class NewLoginForm(LoginView):
