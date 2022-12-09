@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<title>Catalog</title>
+    <title>Catalog</title>
     {% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
 </head>
 <body>
-<!-- verx-->
+
+<!--Header-->
 {% include "header.html" %}
 
 <ul>
-
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -27,10 +27,12 @@
                 font-size: 3.5rem;
             }
         }
+
     </style>
 
-    <main>
 
+    <!--Search system not results-->
+    <main>
         <section class="py-5 text-center container">
             <div class="row py-lg-0">
                 <div class="col-lg-6 col-md-8 mx-auto">
@@ -38,16 +40,11 @@
                 </div>
             </div>
         </section>
-
     </main>
-
 </ul>
 
 
-
-
-
- <!--konec-->
+<!--Footer-->
 {% include "footer.html" %}
 
 <script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js' %}"></script>

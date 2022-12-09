@@ -1,11 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
-# Create your models here.
-class Karysel(models.Model):
+
+
+# Carousel
+class Carousel(models.Model):
     image = models.ImageField(upload_to='')
 
 
-class Catal(models.Model):
+# Catalog
+class Catalog(models.Model):
     class CarType(models.IntegerChoices):
         UNKNOWN = 0, ('Unknown')
         SEDAN = 1, ('Sedan')
@@ -23,20 +26,23 @@ class Catal(models.Model):
     carType = models.IntegerField(default=CarType.UNKNOWN, choices=CarType.choices)
     price = models.IntegerField()
 
+
+# Comment
 class CommentCar(models.Model):
     username = models.CharField(max_length=20, null=True)
-    comment = models.ForeignKey(Catal, on_delete=models.CASCADE, related_name='comment')
+    comment = models.ForeignKey(Catalog, on_delete=models.CASCADE, related_name='comments')
     text = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return self.comment.name
 
 
-
+# Custom User
 class CustomUser(User):
     class Meta:
-        verbose_name='User'
-        verbose_name_plural='Users'
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
 
     ADMIN = 1
     VipClient = 2
@@ -60,13 +66,3 @@ class CustomUser(User):
     phone_number = models.CharField(max_length=50)
     age = models.PositiveIntegerField()
     gender = models.IntegerField(choices=GENDER_TYPE, verbose_name='Гендер')
-
-
-
-
-
-
-
-
-
-

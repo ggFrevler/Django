@@ -2,86 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<title>Volkswagen</title>
+    <title>Volkswagen</title>
     {% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
 </head>
 <body>
- <!-- Verx -->
-    {% include "header.html" with homeActive="active" %}
 
-<!-- kartinki -->
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-0">
-            </div>
-            <div class="col-12">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        {% for i in index %}
-                        <div class="carousel-item active">
-                            <img src={{i.image.url}} class="d-block w-100" alt="...">
-                        </div>
-                        {%endfor%}
+<!--Header-->
+{% include "header.html" with homeActive="active" %}
+
+
+<!--Carousel-->
+<div class="container text-center">
+    <div class="row">
+        <div class="col-0">
+        </div>
+        <div class="col-12">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for i in index %}
+                    <div class="carousel-item active">
+                        <img src={{i.image.url}} class="d-block w-100" alt="...">
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    {%endfor%}
                 </div>
-            </div>
-            <div class="col-0">
-
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-    </div>
-
- <!--3 bloka-->
-    <div class="container px-4 py-5" id="featured-3">
-        <h2 class="pb-2 border-bottom">Volkswagen's Main services</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-            <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <img src="{% static 'images/6.png'  %}" width="50px">
-                </div>
-                <h3 class="fs-2">Service</h3>
-                <p>Choosing a reliable Volkswagen car, you get quality guarantees from the brand and the most comfortable conditions during the period of car ownership. </p>
-                <a href="mailto:mephi1984@gmail.com" class="icon-link d-inline-flex align-items-center">
-                    Get the quote
-                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-                </a>
-            </div>
-            <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <img src="{% static 'images/5.png' %}" width="50px">
-                </div>
-                <h3 class="fs-2">Cars in stock</h3>
-                <p>Becoming the owner of a new Volkswagen car is easier than you thought - just select the desired configuration or find the dealer closest to you.</p>
-                <a href="catalog/" class="icon-link d-inline-flex align-items-center">
-                    Select a car
-                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-                </a>
-            </div>
-            <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <img src="{% static 'images/4.png' %}" width="50px">
-                </div>
-                <h3 class="fs-2">Find a dealer</h3>
-                <p>Find the Volkswagen dealership closest to you.</p>
-                <a href="about/" class="icon-link d-inline-flex align-items-center">
-                    Find a dealer
-                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-                </a>
-            </div>
+        <div class="col-0">
         </div>
     </div>
+</div>
 
- <!--konec-->
+
+<!--Services-->
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Volkswagen's Main services</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <img src="{% static 'images/6.png'  %}" width="50px">
+            </div>
+            <h3 class="fs-2">Service</h3>
+            <p>Choosing a reliable Volkswagen car, you get quality guarantees from the brand and the most comfortable
+                conditions during the period of car ownership. </p>
+            <a href="mailto:mephi1984@gmail.com" class="icon-link d-inline-flex align-items-center">
+                Get the quote
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#chevron-right"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <img src="{% static 'images/5.png' %}" width="50px">
+            </div>
+            <h3 class="fs-2">Cars in stock</h3>
+            <p>Becoming the owner of a new Volkswagen car is easier than you thought - just select the desired
+                configuration or find the dealer closest to you.</p>
+            <a href="catalog/" class="icon-link d-inline-flex align-items-center">
+                Select a car
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#chevron-right"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <img src="{% static 'images/4.png' %}" width="50px">
+            </div>
+            <h3 class="fs-2">Find a dealer</h3>
+            <p>Find the Volkswagen dealership closest to you.</p>
+            <a href="about/" class="icon-link d-inline-flex align-items-center">
+                Find a dealer
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#chevron-right"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!--Footer-->
 {% include "footer.html" %}
 
 <script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js' %}"></script>

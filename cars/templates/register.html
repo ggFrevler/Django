@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       <meta charset="UTF-8">
-<title>About</title>
+    <meta charset="UTF-8">
+    <title>About</title>
     {% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
 </head>
 <body>
- <!-- verx-->
-    {% include "header.html" with aboutActive="active" %}
+
+<!--Header-->
+{% include "header.html" with aboutActive="active" %}
 
 <style>
         .bd-placeholder-img {
@@ -25,51 +26,51 @@
                 font-size: 3.5rem;
             }
         }
-    </style>
 
-    <main class="container">
-<div class="row justify-content-center" style="margin-top:25px;margin-bottom:100px">
-<form method="post">
-  {% csrf_token %}
+</style>
 
 
- <div class="row justify-content-center" style="margin-top:100px;margin-bottom:80px">
-<center>
-<a type="button" class="btn btn-light btn-lg" href="/login/"  >Authorization</a>
-    <button type="button" class="btn btn-light btn-lg" disabled>Registration</button>
-    </center>
+<!--Authorization/Registration-->
+<main class="container">
+    <div class="row justify-content-center" style="margin-top:60px;margin-bottom:100px">
+        <center>
+            <a type="button" class="btn btn-light btn-active btn-lg" href="/login/">Authorization</a>
+            <a href="#" type="button" class="btn btn-dark btn-lg" disabled>Registration</a>
+        </center>
 
-  <div class="form-floating gap-3 col-3 mx-auto">
-    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username" type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" id="id_username">
-    <label for="floatingInputGroup1">Username</label>
-  </div>
-     <div><label></label></div>
-<div class="form-floating mb-3 gap-2 col-3 mx-auto">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-  <label for="floatingInput">Email address</label>
-</div>
-     <div><label></label></div>
-<div class="form-floating gap-3 col-3 mx-auto">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
-  <label for="floatingPassword">Password</label>
-</div>
-     <div><label></label></div>
-<div class="form-floating gap-3 col-3 mx-auto">
-  <input type="password" class="form-control" id="floatingPassword1" placeholder="Password" type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
-  <label for="floatingPassword">Password again</label>
-</div>
+        <!--Registration-->
+        <form method="post">
+            {% csrf_token %}
+            <div class="row justify-content-center" style="margin-top:30px;margin-bottom:100px">
+                <div class="form-floating gap-3 col-3 mx-auto">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username" type="text"
+                           name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus=""
+                           required="" id="id_username">
+                    <label for="floatingInputGroup1">Username</label>
+                </div>
+                <div><label></label></div>
+                <div class="form-floating gap-3 col-3 mx-auto">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                           type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div><label></label></div>
+                <div class="form-floating gap-3 col-3 mx-auto">
+                    <input type="password" class="form-control" id="floatingPassword1" placeholder="Password"
+                           type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+                    <label for="floatingPassword">Password again</label>
+                </div>
+                <div><label></label></div>
+                <div class="d-grid gap-3 col-3 mx-auto">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
 
-<div><label></label></div>
 
-
-<div class="d-grid gap-3 col-3 mx-auto">
-  <button type="submit" class="btn btn-primary">Register</button>
-</div>
-     </div>
-</form>
-</div>
-          </main>
- <!--konec-->
+<!--Footer-->
 {% include "footer.html" %}
 
 <script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js' %}"></script>
