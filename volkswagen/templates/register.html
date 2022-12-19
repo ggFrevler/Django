@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<!--Header-->
+{% include "header.html" with aboutActive="active" %}
+
+<style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+</style>
+
+
+<!--Authorization/Registration-->
+<main class="container">
+    <div class="row justify-content-center" style="margin-top:60px;margin-bottom:100px">
+        <center>
+            <a type="button" class="btn btn-light btn-active btn-lg" href="/login/">Authorization</a>
+            <a href="#" type="button" class="btn btn-dark btn-lg" disabled>Registration</a>
+        </center>
+
+        <!--Registration-->
+        <form method="post">
+            {% csrf_token %}
+            <div class="row justify-content-center" style="margin-top:30px;margin-bottom:100px">
+                <div class="form-floating gap-3 col-3 mx-auto">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username" type="text"
+                           name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus=""
+                           required="" id="id_username">
+                    <label for="floatingInputGroup1">Username</label>
+                </div>
+                <div><label></label></div>
+                <div class="form-floating gap-3 col-3 mx-auto">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                           type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div><label></label></div>
+                <div class="form-floating gap-3 col-3 mx-auto">
+                    <input type="password" class="form-control" id="floatingPassword1" placeholder="Password"
+                           type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+                    <label for="floatingPassword">Password again</label>
+                </div>
+                <div><label></label></div>
+                <div class="d-grid gap-3 col-3 mx-auto">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

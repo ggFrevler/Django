@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<!--Header-->
+{% include "header.html" with aboutActive="active" %}
+
+<style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+
+</style>
+
+
+<!--About us-->
+<main>
+    <div class="container py-4">
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Volkswagen Dealer Center</h1>
+                <p class="col-md-8 fs-4">Volkswagen Dealer Center is the one and only certified Volkswagen Dealer center
+                    in Bishkek. We distribute Volkwagen cars in Kyrgyzstan, as well as provide car maintenance and
+                    leasing service.</p>
+                <a href="../catalog/" class="btn btn-primary btn-lg" type="button">Check our cars in stock</a>
+            </div>
+        </div>
+
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+                <div class="h-100 p-5 text-bg-dark rounded-3">
+                    <h2>Volkwagen Car Authorized service</h2>
+                    <p>We provide full cycle service for Volkswagen car, including: detailing, car paint, oil change,
+                        engine check, transmission check, electronics repair and much more.</p>
+                    <a href="mailto:mephi1984@gmail.com" class="btn btn-outline-light" type="button">Send a request</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>Visit us</h2>
+                    <p>Address: Maldybaeva 34B</p>
+                    <img src="{% static 'images/map.png' %}" style="width:90%;margin-bottom:18px"/>
+                    <a href="https://go.2gis.com/am4qz" class="btn btn-outline-secondary" type="button">Show on map</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!--Footer-->
+{% include "footer.html" %}
+
+<script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
